@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="GDF-SO-hmz">
+            <objects>
+                <viewController storyboardIdentifier="PlayerView" id="zYs-aA-vsa" customClass="PlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fOU-Em-oTz"/>
+                        <viewControllerLayoutGuide type="bottom" id="k1F-vf-PAM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2WH-RX-2IK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-k7-BER">
+                                <rect key="frame" x="253" y="402" width="31" height="30"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pauseAction:" destination="zYs-aA-vsa" eventType="touchUpInside" id="oEV-6B-OYc"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QZH-o7-ISY">
+                                <rect key="frame" x="65" y="466" width="234" height="30"/>
+                                <color key="tintColor" red="1" green="0.460094897" blue="0.28723662890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="dQy-IU-oNT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="valueBegin:" destination="zYs-aA-vsa" eventType="touchDown" id="zKO-wy-Bm6"/>
+                                    <action selector="valueChange:" destination="zYs-aA-vsa" eventType="valueChanged" id="CEG-ut-mgn"/>
+                                    <action selector="valueEnd:" destination="zYs-aA-vsa" eventType="touchCancel" id="Pof-xN-2Zk"/>
+                                    <action selector="valueEnd:" destination="zYs-aA-vsa" eventType="touchUpInside" id="RAI-ET-vTa"/>
+                                    <action selector="valueEnd:" destination="zYs-aA-vsa" eventType="touchUpOutside" id="pta-Dc-1vR"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIt-dp-Vme">
+                                <rect key="frame" x="72" y="402" width="31" height="30"/>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="playAction:" destination="zYs-aA-vsa" eventType="touchUpInside" id="7tw-sn-WBA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iIt-dp-Vme" firstAttribute="centerX" secondItem="2WH-RX-2IK" secondAttribute="centerX" constant="-100" id="5wX-EZ-bqz"/>
+                            <constraint firstItem="iIt-dp-Vme" firstAttribute="top" secondItem="fOU-Em-oTz" secondAttribute="bottom" constant="382" id="IW3-Tj-suC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E6m-k7-BER" secondAttribute="trailing" constant="75" id="XXf-1S-mWo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QZH-o7-ISY" secondAttribute="trailing" constant="62" id="XtT-lx-sBM"/>
+                            <constraint firstItem="QZH-o7-ISY" firstAttribute="top" secondItem="iIt-dp-Vme" secondAttribute="bottom" constant="34" id="fmO-XH-vIF"/>
+                            <constraint firstItem="QZH-o7-ISY" firstAttribute="leading" secondItem="2WH-RX-2IK" secondAttribute="leadingMargin" constant="51" id="iEc-yX-8Y3"/>
+                            <constraint firstItem="iIt-dp-Vme" firstAttribute="baseline" secondItem="E6m-k7-BER" secondAttribute="baseline" id="kV6-4l-0xb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pauseBtn" destination="E6m-k7-BER" id="kl4-Bu-PZW"/>
+                        <outlet property="playBtn" destination="iIt-dp-Vme" id="lDe-0b-NZd"/>
+                        <outlet property="slider" destination="QZH-o7-ISY" id="RNW-AL-FZI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eV-oS-9Vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167.5" y="-133.5"/>
+        </scene>
+    </scenes>
+</document>

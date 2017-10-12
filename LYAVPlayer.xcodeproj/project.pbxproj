@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		355894521F8F5DF0000F7DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355894511F8F5DF0000F7DF6 /* Assets.xcassets */; };
+		355894551F8F5DF0000F7DF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355894531F8F5DF0000F7DF6 /* LaunchScreen.storyboard */; };
+		355894581F8F5DF0000F7DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355894571F8F5DF0000F7DF6 /* main.m */; };
+		355894621F8F5DF0000F7DF6 /* LYAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 355894611F8F5DF0000F7DF6 /* LYAVPlayerTests.m */; };
+		3558946D1F8F5DF0000F7DF6 /* LYAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3558946C1F8F5DF0000F7DF6 /* LYAVPlayerUITests.m */; };
+		3558947D1F8F5E55000F7DF6 /* LYAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3558947B1F8F5E55000F7DF6 /* LYAVPlayerView.m */; };
+		355894831F8F5EAD000F7DF6 /* PlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3558947E1F8F5EAC000F7DF6 /* PlayerViewController.storyboard */; };
+		355894841F8F5EAD000F7DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355894811F8F5EAD000F7DF6 /* AppDelegate.m */; };
+		355894851F8F5EAD000F7DF6 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355894821F8F5EAD000F7DF6 /* PlayerViewController.m */; };
+		CC06C9B014A3215D045586C7 /* Pods_LYAVPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A72186C4432CB19046B9E4 /* Pods_LYAVPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3558945E1F8F5DF0000F7DF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3558943D1F8F5DF0000F7DF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 355894441F8F5DF0000F7DF6;
+			remoteInfo = LYAVPlayer;
+		};
+		355894691F8F5DF0000F7DF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3558943D1F8F5DF0000F7DF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 355894441F8F5DF0000F7DF6;
+			remoteInfo = LYAVPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		355894451F8F5DF0000F7DF6 /* LYAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		355894511F8F5DF0000F7DF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		355894541F8F5DF0000F7DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		355894561F8F5DF0000F7DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355894571F8F5DF0000F7DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3558945D1F8F5DF0000F7DF6 /* LYAVPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYAVPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		355894611F8F5DF0000F7DF6 /* LYAVPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAVPlayerTests.m; sourceTree = "<group>"; };
+		355894631F8F5DF0000F7DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355894681F8F5DF0000F7DF6 /* LYAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3558946C1F8F5DF0000F7DF6 /* LYAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAVPlayerUITests.m; sourceTree = "<group>"; };
+		3558946E1F8F5DF0000F7DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3558947B1F8F5E55000F7DF6 /* LYAVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAVPlayerView.m; sourceTree = "<group>"; };
+		3558947C1F8F5E55000F7DF6 /* LYAVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAVPlayerView.h; sourceTree = "<group>"; };
+		3558947E1F8F5EAC000F7DF6 /* PlayerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerViewController.storyboard; sourceTree = "<group>"; };
+		3558947F1F8F5EAD000F7DF6 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		355894801F8F5EAD000F7DF6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		355894811F8F5EAD000F7DF6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		355894821F8F5EAD000F7DF6 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		719F277E04153F456DC6DFAF /* Pods-LYAVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYAVPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYAVPlayer/Pods-LYAVPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		76A72186C4432CB19046B9E4 /* Pods_LYAVPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYAVPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E48C30709F50B91F8945C926 /* Pods-LYAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYAVPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYAVPlayer/Pods-LYAVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		355894421F8F5DF0000F7DF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC06C9B014A3215D045586C7 /* Pods_LYAVPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3558945A1F8F5DF0000F7DF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355894651F8F5DF0000F7DF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3558943C1F8F5DF0000F7DF6 = {
+			isa = PBXGroup;
+			children = (
+				355894471F8F5DF0000F7DF6 /* LYAVPlayer */,
+				355894601F8F5DF0000F7DF6 /* LYAVPlayerTests */,
+				3558946B1F8F5DF0000F7DF6 /* LYAVPlayerUITests */,
+				355894461F8F5DF0000F7DF6 /* Products */,
+				CDE8965E88E92E99C37EBCCA /* Pods */,
+				CA0C9D1FD19857FC11B8A3FD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		355894461F8F5DF0000F7DF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				355894451F8F5DF0000F7DF6 /* LYAVPlayer.app */,
+				3558945D1F8F5DF0000F7DF6 /* LYAVPlayerTests.xctest */,
+				355894681F8F5DF0000F7DF6 /* LYAVPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		355894471F8F5DF0000F7DF6 /* LYAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				355894801F8F5EAD000F7DF6 /* AppDelegate.h */,
+				355894811F8F5EAD000F7DF6 /* AppDelegate.m */,
+				3558947F1F8F5EAD000F7DF6 /* PlayerViewController.h */,
+				355894821F8F5EAD000F7DF6 /* PlayerViewController.m */,
+				3558947E1F8F5EAC000F7DF6 /* PlayerViewController.storyboard */,
+				3558947A1F8F5E26000F7DF6 /* LYAVPlayerView */,
+				355894511F8F5DF0000F7DF6 /* Assets.xcassets */,
+				355894531F8F5DF0000F7DF6 /* LaunchScreen.storyboard */,
+				355894561F8F5DF0000F7DF6 /* Info.plist */,
+				355894571F8F5DF0000F7DF6 /* main.m */,
+			);
+			path = LYAVPlayer;
+			sourceTree = "<group>";
+		};
+		355894601F8F5DF0000F7DF6 /* LYAVPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				355894611F8F5DF0000F7DF6 /* LYAVPlayerTests.m */,
+				355894631F8F5DF0000F7DF6 /* Info.plist */,
+			);
+			path = LYAVPlayerTests;
+			sourceTree = "<group>";
+		};
+		3558946B1F8F5DF0000F7DF6 /* LYAVPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3558946C1F8F5DF0000F7DF6 /* LYAVPlayerUITests.m */,
+				3558946E1F8F5DF0000F7DF6 /* Info.plist */,
+			);
+			path = LYAVPlayerUITests;
+			sourceTree = "<group>";
+		};
+		3558947A1F8F5E26000F7DF6 /* LYAVPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				3558947C1F8F5E55000F7DF6 /* LYAVPlayerView.h */,
+				3558947B1F8F5E55000F7DF6 /* LYAVPlayerView.m */,
+			);
+			path = LYAVPlayerView;
+			sourceTree = "<group>";
+		};
+		CA0C9D1FD19857FC11B8A3FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76A72186C4432CB19046B9E4 /* Pods_LYAVPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDE8965E88E92E99C37EBCCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E48C30709F50B91F8945C926 /* Pods-LYAVPlayer.debug.xcconfig */,
+				719F277E04153F456DC6DFAF /* Pods-LYAVPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		355894441F8F5DF0000F7DF6 /* LYAVPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355894711F8F5DF0000F7DF6 /* Build configuration list for PBXNativeTarget "LYAVPlayer" */;
+			buildPhases = (
+				CE5C637190C8FA63B3DEB251 /* [CP] Check Pods Manifest.lock */,
+				355894411F8F5DF0000F7DF6 /* Sources */,
+				355894421F8F5DF0000F7DF6 /* Frameworks */,
+				355894431F8F5DF0000F7DF6 /* Resources */,
+				4B73D4F7990C44E60966EB3D /* [CP] Embed Pods Frameworks */,
+				C17C43EFE1A25C4B6CD2E43A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYAVPlayer;
+			productName = LYAVPlayer;
+			productReference = 355894451F8F5DF0000F7DF6 /* LYAVPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3558945C1F8F5DF0000F7DF6 /* LYAVPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355894741F8F5DF0000F7DF6 /* Build configuration list for PBXNativeTarget "LYAVPlayerTests" */;
+			buildPhases = (
+				355894591F8F5DF0000F7DF6 /* Sources */,
+				3558945A1F8F5DF0000F7DF6 /* Frameworks */,
+				3558945B1F8F5DF0000F7DF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3558945F1F8F5DF0000F7DF6 /* PBXTargetDependency */,
+			);
+			name = LYAVPlayerTests;
+			productName = LYAVPlayerTests;
+			productReference = 3558945D1F8F5DF0000F7DF6 /* LYAVPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		355894671F8F5DF0000F7DF6 /* LYAVPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355894771F8F5DF0000F7DF6 /* Build configuration list for PBXNativeTarget "LYAVPlayerUITests" */;
+			buildPhases = (
+				355894641F8F5DF0000F7DF6 /* Sources */,
+				355894651F8F5DF0000F7DF6 /* Frameworks */,
+				355894661F8F5DF0000F7DF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3558946A1F8F5DF0000F7DF6 /* PBXTargetDependency */,
+			);
+			name = LYAVPlayerUITests;
+			productName = LYAVPlayerUITests;
+			productReference = 355894681F8F5DF0000F7DF6 /* LYAVPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3558943D1F8F5DF0000F7DF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Myself;
+				TargetAttributes = {
+					355894441F8F5DF0000F7DF6 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					3558945C1F8F5DF0000F7DF6 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 355894441F8F5DF0000F7DF6;
+					};
+					355894671F8F5DF0000F7DF6 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 355894441F8F5DF0000F7DF6;
+					};
+				};
+			};
+			buildConfigurationList = 355894401F8F5DF0000F7DF6 /* Build configuration list for PBXProject "LYAVPlayer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3558943C1F8F5DF0000F7DF6;
+			productRefGroup = 355894461F8F5DF0000F7DF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				355894441F8F5DF0000F7DF6 /* LYAVPlayer */,
+				3558945C1F8F5DF0000F7DF6 /* LYAVPlayerTests */,
+				355894671F8F5DF0000F7DF6 /* LYAVPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		355894431F8F5DF0000F7DF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355894831F8F5EAD000F7DF6 /* PlayerViewController.storyboard in Resources */,
+				355894551F8F5DF0000F7DF6 /* LaunchScreen.storyboard in Resources */,
+				355894521F8F5DF0000F7DF6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3558945B1F8F5DF0000F7DF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355894661F8F5DF0000F7DF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B73D4F7990C44E60966EB3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LYAVPlayer/Pods-LYAVPlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYAVPlayer/Pods-LYAVPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C17C43EFE1A25C4B6CD2E43A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYAVPlayer/Pods-LYAVPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE5C637190C8FA63B3DEB251 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYAVPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		355894411F8F5DF0000F7DF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3558947D1F8F5E55000F7DF6 /* LYAVPlayerView.m in Sources */,
+				355894851F8F5EAD000F7DF6 /* PlayerViewController.m in Sources */,
+				355894581F8F5DF0000F7DF6 /* main.m in Sources */,
+				355894841F8F5EAD000F7DF6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355894591F8F5DF0000F7DF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355894621F8F5DF0000F7DF6 /* LYAVPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355894641F8F5DF0000F7DF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3558946D1F8F5DF0000F7DF6 /* LYAVPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3558945F1F8F5DF0000F7DF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 355894441F8F5DF0000F7DF6 /* LYAVPlayer */;
+			targetProxy = 3558945E1F8F5DF0000F7DF6 /* PBXContainerItemProxy */;
+		};
+		3558946A1F8F5DF0000F7DF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 355894441F8F5DF0000F7DF6 /* LYAVPlayer */;
+			targetProxy = 355894691F8F5DF0000F7DF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		355894531F8F5DF0000F7DF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355894541F8F5DF0000F7DF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3558946F1F8F5DF0000F7DF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		355894701F8F5DF0000F7DF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		355894721F8F5DF0000F7DF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48C30709F50B91F8945C926 /* Pods-LYAVPlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.Boke.com.LYAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		355894731F8F5DF0000F7DF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 719F277E04153F456DC6DFAF /* Pods-LYAVPlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.Boke.com.LYAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		355894751F8F5DF0000F7DF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAVPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.Boke.com.LYAVPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYAVPlayer.app/LYAVPlayer";
+			};
+			name = Debug;
+		};
+		355894761F8F5DF0000F7DF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAVPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.Boke.com.LYAVPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYAVPlayer.app/LYAVPlayer";
+			};
+			name = Release;
+		};
+		355894781F8F5DF0000F7DF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAVPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.Boke.com.LYAVPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYAVPlayer;
+			};
+			name = Debug;
+		};
+		355894791F8F5DF0000F7DF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAVPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.Boke.com.LYAVPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYAVPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		355894401F8F5DF0000F7DF6 /* Build configuration list for PBXProject "LYAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3558946F1F8F5DF0000F7DF6 /* Debug */,
+				355894701F8F5DF0000F7DF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		355894711F8F5DF0000F7DF6 /* Build configuration list for PBXNativeTarget "LYAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355894721F8F5DF0000F7DF6 /* Debug */,
+				355894731F8F5DF0000F7DF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		355894741F8F5DF0000F7DF6 /* Build configuration list for PBXNativeTarget "LYAVPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355894751F8F5DF0000F7DF6 /* Debug */,
+				355894761F8F5DF0000F7DF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		355894771F8F5DF0000F7DF6 /* Build configuration list for PBXNativeTarget "LYAVPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355894781F8F5DF0000F7DF6 /* Debug */,
+				355894791F8F5DF0000F7DF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3558943D1F8F5DF0000F7DF6 /* Project object */;
+}
