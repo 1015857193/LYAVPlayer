@@ -124,12 +124,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
         
         [self.player seekToTime:cmTime toleranceBefore:CMTimeMake(1,1)  toleranceAfter:CMTimeMake(1,1) completionHandler:^(BOOL finished) {
             
-            if (finished && self.isPlaying) {
-                
-                
-                [self.player play];
-            }
-            
+
             
         }];
         

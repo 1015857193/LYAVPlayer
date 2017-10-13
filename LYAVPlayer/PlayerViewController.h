@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LYAVPlayerView.h"
 
 @interface PlayerViewController : UIViewController
+
+@property (nonatomic,strong)LYAVPlayerView *playerView;
 
 @end

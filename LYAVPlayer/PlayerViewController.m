@@ -7,7 +7,7 @@
 //
 
 #import "PlayerViewController.h"
-#import "LYAVPlayerView.h"
+
 
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -22,7 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 
-@property (nonatomic,strong)LYAVPlayerView *playerView;
+
 @property (nonatomic,assign)BOOL isSlidering;
 
 @end

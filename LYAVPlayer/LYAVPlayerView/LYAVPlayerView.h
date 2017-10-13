@@ -26,21 +26,16 @@
 //所有的代理方法均已回到主线程 可直接刷新UI
 // 可播放／播放中
 - (void)videoPlayerIsReadyToPlayVideo:(LYAVPlayerView *)playerView;
-
 //播放完毕
 - (void)videoPlayerDidReachEnd:(LYAVPlayerView *)playerView;
 //当前播放时间
 - (void)videoPlayer:(LYAVPlayerView *)playerView timeDidChange:(CGFloat )time;
-
 //duration 当前缓冲的长度
 - (void)videoPlayer:(LYAVPlayerView *)playerView loadedTimeRangeDidChange:(CGFloat )duration;
-
 //进行跳转后没数据 即播放卡顿
 - (void)videoPlayerPlaybackBufferEmpty:(LYAVPlayerView *)playerView;
-
 // 进行跳转后有数据 能够继续播放
 - (void)videoPlayerPlaybackLikelyToKeepUp:(LYAVPlayerView *)playerView;
-
 //加载失败
 - (void)videoPlayer:(LYAVPlayerView *)playerView didFailWithError:(NSError *)error;
 
