@@ -36,6 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //想实现后台播放使用sharedInstance
+    
     self.playerView =[[LYAVPlayerView alloc]init];
     self.playerView.frame =CGRectMake(0, 64, ScreenWidth,200);
     self.playerView.delegate =self;
