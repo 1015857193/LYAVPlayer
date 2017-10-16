@@ -70,6 +70,8 @@
 //设置播放URL
 - (void)setURL:(NSURL *)URL;
 
+- (void)setAsset:(AVURLAsset *)asset;
+
 //跳到xx秒播放视频
 - (void)seekToTime:(CGFloat )time;
 
@@ -90,6 +92,8 @@
 
 //获取视频的总时间长
 - (CGFloat)getTotalPlayTime;
+
+
 
 
 

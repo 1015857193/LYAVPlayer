@@ -1,0 +1,22 @@
+//
+//  LYAVPlayer-Prefix.pch
+//  LYAVPlayer
+//
+//  Created by luyang on 2017/10/16.
+//  Copyright © 2017年 Myself. All rights reserved.
+//
+
+#ifndef LYAVPlayer_Prefix_pch
+#define LYAVPlayer_Prefix_pch
+
+#import "LYAVPlayerView.h"
+
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define VideoURL @"http://baobab.wdjcdn.com/1457521866561_5888_854x480.mp4"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* LYAVPlayer_Prefix_pch */

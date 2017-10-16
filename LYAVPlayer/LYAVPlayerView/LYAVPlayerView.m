@@ -57,6 +57,40 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
         
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    
+    self =[super initWithCoder:aDecoder];
+    if (self)
+    {
+        
+        [self setupAudioSession];
+    }
+    
+    return self;
+    
+    
+}
+
+- (void)awakeFromNib{
+    
+    [super awakeFromNib];
+    
+     [self setupAudioSession];
+    
+}
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    
+    self =[super initWithFrame:frame];
+    
+    if (self) {
+        
+        [self setupAudioSession];
+    }
+    
+    return self;
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -117,14 +151,15 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
        [self.player.currentItem cancelPendingSeeks];
        
         CMTime cmTime =CMTimeMakeWithSeconds(time, 1);
-        if (CMTIME_IS_INVALID(cmTime) || self.player.currentItem.status != AVPlayerStatusReadyToPlay){
-            
-            return;
-        }
+//        if (CMTIME_IS_INVALID(cmTime) || self.player.currentItem.status != AVPlayerStatusReadyToPlay){
+//
+//            return;
+//        }
         
+        if (CMTIME_IS_INVALID(cmTime)) return;
         [self.player seekToTime:cmTime toleranceBefore:CMTimeMake(1,1)  toleranceAfter:CMTimeMake(1,1) completionHandler:^(BOOL finished) {
             
-
+            
             
         }];
         
@@ -141,9 +176,26 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     [self resetPlayerItemIfNecessary];
     
     self.urlAsset =[AVURLAsset assetWithURL:URL];
+    
+    [self creatPlayerWithAsset:self.urlAsset];
+    
+}
+
+- (void)setAsset:(AVURLAsset *)asset{
+    
+    //如果有正在播放的视频 先释放掉
+    [self resetPlayerItemIfNecessary];
+    
+    [self creatPlayerWithAsset:asset];
+    
+    
+}
+
+- (void)creatPlayerWithAsset:(AVURLAsset *)urlAsset{
+    
     // 初始化playerItem
-    self.item =[AVPlayerItem playerItemWithAsset:self.urlAsset];
-   
+    self.item =[AVPlayerItem playerItemWithAsset:urlAsset];
+    
     //判断
     if(!self.item){
         
@@ -153,7 +205,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
         
     }
     
-     // 每次都重新创建Player，替换replaceCurrentItemWithPlayerItem:，该方法阻塞线程
+    // 每次都重新创建Player，替换replaceCurrentItemWithPlayerItem:，该方法阻塞线程
     self.player =[AVPlayer playerWithPlayerItem:self.item];
     
     self.playerLayer =[AVPlayerLayer playerLayerWithPlayer:self.player];
@@ -164,13 +216,15 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     [self setNeedsLayout];
     [self layoutIfNeeded];
     
-     // 添加playerLayer到self.layer
+    // 添加playerLayer到self.layer
     [self.layer insertSublayer:self.playerLayer atIndex:0];
     
     //添加播放时间观察
     [self enableTimeUpdates];
-   //添加观察
-     [self preparePlayerItem:self.item];
+    //添加观察
+    [self preparePlayerItem:self.item];
+    
+    
     
 }
 
@@ -359,7 +413,11 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     //移除时间观察
     [self disableTimeUpdates];
     
-    [self.playerLayer removeFromSuperlayer];
+    if (self.playerLayer) {
+        
+         [self.playerLayer removeFromSuperlayer];
+    }
+   
     
     if (self.item){
        

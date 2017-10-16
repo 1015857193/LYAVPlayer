@@ -50,11 +50,24 @@
                                     <action selector="playAction:" destination="zYs-aA-vsa" eventType="touchUpInside" id="7tw-sn-WBA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piF-64-R9y">
+                                <rect key="frame" x="170.5" y="398" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Vhg-og-pyV"/>
+                                    <constraint firstAttribute="width" constant="34" id="d3E-fG-Qc7"/>
+                                </constraints>
+                                <state key="normal" title="跳转"/>
+                                <connections>
+                                    <action selector="turnAction:" destination="zYs-aA-vsa" eventType="touchUpInside" id="sjw-g0-ZWh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iIt-dp-Vme" firstAttribute="centerX" secondItem="2WH-RX-2IK" secondAttribute="centerX" constant="-100" id="5wX-EZ-bqz"/>
+                            <constraint firstItem="QZH-o7-ISY" firstAttribute="top" secondItem="piF-64-R9y" secondAttribute="bottom" constant="34" id="FqU-in-IhO"/>
                             <constraint firstItem="iIt-dp-Vme" firstAttribute="top" secondItem="fOU-Em-oTz" secondAttribute="bottom" constant="382" id="IW3-Tj-suC"/>
+                            <constraint firstItem="piF-64-R9y" firstAttribute="centerX" secondItem="2WH-RX-2IK" secondAttribute="centerX" id="Ppx-n0-bbB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E6m-k7-BER" secondAttribute="trailing" constant="75" id="XXf-1S-mWo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QZH-o7-ISY" secondAttribute="trailing" constant="62" id="XtT-lx-sBM"/>
                             <constraint firstItem="QZH-o7-ISY" firstAttribute="top" secondItem="iIt-dp-Vme" secondAttribute="bottom" constant="34" id="fmO-XH-vIF"/>

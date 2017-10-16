@@ -7,12 +7,10 @@
 //
 
 #import "PlayerViewController.h"
+#import "SecondViewController.h"
 
 
-#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
-#define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
-#define VideoURL @"http://baobab.wdjcdn.com/1457521866561_5888_854x480.mp4"
 
 @interface PlayerViewController ()<LYVideoPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
@@ -25,6 +23,12 @@
 
 @property (nonatomic,assign)BOOL isSlidering;
 
+@property (nonatomic,strong)LYAVPlayerView *playerView;
+
+@property (nonatomic,strong)AVURLAsset *asset;
+
+
+
 @end
 
 @implementation PlayerViewController
@@ -32,8 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    self.playerView =[LYAVPlayerView sharedInstance];
+    self.playerView =[[LYAVPlayerView alloc]init];
     self.playerView.frame =CGRectMake(0, 64, ScreenWidth,200);
     self.playerView.delegate =self;
     [self.view addSubview:self.playerView];
@@ -83,11 +86,22 @@
     
     
 }
+- (IBAction)turnAction:(id)sender {
+    
+     [self.playerView pause];
+    
+    CGFloat time =[self.playerView getCurrentPlayTime];
+    
+    SecondViewController *viewCtrl =[[SecondViewController alloc]init];
+    viewCtrl.asset =self.playerView.urlAsset;
+    viewCtrl.time =time;
+    [self.navigationController pushViewController:viewCtrl animated:NO];
+    
+}
 
 #pragma mark-----LYVideoPlayerDelegate-------
 // 可播放／播放中
 - (void)videoPlayerIsReadyToPlayVideo:(LYAVPlayerView *)playerView{
-    
     
     NSLog(@"可播放");
     

@@ -27,7 +27,9 @@
     
     PlayerViewController *playerViewCtrl =(PlayerViewController *)[[UIStoryboard storyboardWithName:@"PlayerViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"PlayerView"];
     
-    self.window.rootViewController = playerViewCtrl;
+    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:playerViewCtrl];
+    
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
     return YES;
