@@ -7,7 +7,7 @@ LYAVPlayer视频播放器，AVPlayer的封装，继承UIView.LYAVPlaye旨在封�
               [playerView play];
               
  具体详情参见demo。
- 博客地址：http://www.jianshu.com/p/fb55715f42d5</br></br></br>
-         http://www.jianshu.com/p/fb55715f42d5
+ 博客地址：http://www.jianshu.com/p/fb55715f42d5</br></br>
+        </br> http://www.jianshu.com/p/fb55715f42d5
               
               
