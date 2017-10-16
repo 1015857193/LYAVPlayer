@@ -6,6 +6,5 @@ self.playerView.delegate =self;
 [self.view addSubview:self.playerView];
 [self.playerView setURL:[NSURL URLWithString:VideoURL]];
 [self.playerView play];
-博客地址：http://www.jianshu.com/p/fb55715f42d5
-                  http://www.jianshu.com/p/0ee431c2c694
 
+博客地址：http://www.jianshu.com/p/fb55715f42d5 http://www.jianshu.com/p/0ee431c2c694
