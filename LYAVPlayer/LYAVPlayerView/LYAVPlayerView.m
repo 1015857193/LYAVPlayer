@@ -31,6 +31,8 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
 
 @property (nonatomic, strong) id timeObserverToken;
 
+@property (nonatomic,assign)CGFloat rate;
+
 
 @end
 
@@ -105,6 +107,9 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
 
 - (void)setupAudioSession
 {
+    //先设置rate为1.0
+    _rate =1.0f;
+    
     NSError *categoryError = nil;
     BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&categoryError];
     if (!success)
@@ -449,7 +454,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     if(!self.isPlaying){
         
         self.isPlaying =YES;
-        [self.player play];
+        self.player.rate = _rate;
         
     }
     
@@ -461,7 +466,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     if(self.isPlaying){
     
     self.isPlaying =NO;
-    [self.player pause];
+    self.player.rate =0.0f;
         
     }
     
@@ -479,6 +484,8 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
 
 //设置播放倍速 0.5-2.0
 - (void)setPlayerRate:(CGFloat )rate{
+    
+    _rate =rate;
     
     if(self.player) self.player.rate =rate;
     
