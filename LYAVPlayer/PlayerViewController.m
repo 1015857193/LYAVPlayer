@@ -27,6 +27,7 @@
 
 @property (nonatomic,strong)AVURLAsset *asset;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 @end
@@ -36,15 +37,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   
+    
     //想实现后台播放使用sharedInstance
     self.playerView =[LYAVPlayerView sharedInstance];
-    self.playerView.frame =CGRectMake(0, 64, ScreenWidth,200);
+    //先获取视频的宽高比
+    CGFloat scale =[self.playerView getVideoScale:[NSURL URLWithString:VideoURL]];
+    self.playerView.frame =CGRectMake(0,64,ScreenWidth,200);
+    self.playerView.backgroundColor =[UIColor redColor];
     self.playerView.delegate =self;
     [self.view addSubview:self.playerView];
     [self.playerView setURL:[NSURL URLWithString:VideoURL]];
     [self.playerView play];
     
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5
+//                                                              * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//
+//        [self.playerView seekToTime:30];
+//        [self.playerView play];
+//
+//
+//    });
     
+    
+    _imageView.image =[self.playerView getThumbnailImageFromVideoURL:[NSURL URLWithString:VideoURL] time:5];
     
     
 }

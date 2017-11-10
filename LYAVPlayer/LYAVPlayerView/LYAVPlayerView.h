@@ -93,9 +93,12 @@
 //获取视频的总时间长
 - (CGFloat)getTotalPlayTime;
 
+//获取视频宽高比
+- (CGFloat )getVideoScale:(NSURL *)URL;
 
-
-
-
+//获取网络视频的缩略图
+- (UIImage *)getThumbnailImageFromVideoURL:(NSURL *)URL time:(NSTimeInterval )videoTime;
+//获取本地视频缩略图
+- (UIImage *)getThumbnailImageFromFilePath:(NSString *)videoPath time:(NSTimeInterval )videoTime;
 
 @end

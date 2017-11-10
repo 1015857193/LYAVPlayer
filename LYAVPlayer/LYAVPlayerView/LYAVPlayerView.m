@@ -508,6 +508,79 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
    return 0.0f;
 }
 
+//获取视频宽高比
+- (CGFloat )getVideoScale:(NSURL *)URL{
+    //获取视频尺寸
+    AVURLAsset *asset = [AVURLAsset assetWithURL:URL];
+    
+    NSArray *array = asset.tracks;
+    CGSize videoSize = CGSizeZero;
+    for (AVAssetTrack *track in array) {
+        if ([track.mediaType isEqualToString:AVMediaTypeVideo]) {
+            videoSize = track.naturalSize;
+        }
+    }
+    
+  return videoSize.height/videoSize.width;
+}
+
+- (UIImage *)getThumbnailImageFromVideoURL:(NSURL *)URL time:(NSTimeInterval )videoTime{
+    
+    UIImage *shotImage;
+    
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:URL options:nil];
+    
+    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    
+    gen.appliesPreferredTrackTransform = YES;
+    
+    CMTime time = CMTimeMakeWithSeconds(videoTime, 600);
+    
+    NSError *error = nil;
+    
+    CMTime actualTime;
+    
+    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    
+    shotImage = [[UIImage alloc] initWithCGImage:image];
+    
+    CGImageRelease(image);
+    
+    return shotImage;
+}
+
+
+- (UIImage *)getThumbnailImageFromFilePath:(NSString *)videoPath time:(NSTimeInterval )videoTime {
+    
+    if (!videoPath) {
+        return nil;
+    }
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[[NSURL alloc] initFileURLWithPath:videoPath] options:nil];
+    AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    assetImageGenerator.appliesPreferredTrackTransform = YES;
+    assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
+    
+    CGImageRef thumbnailImageRef = NULL;
+    CFTimeInterval thumbnailImageTime = videoTime;
+    thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 600)
+                                                    actualTime:NULL error:nil];
+    
+    
+    if (!thumbnailImageRef) {
+        return nil;
+    }
+    
+    UIImage *thumbnailImage = [[UIImage alloc] initWithCGImage:thumbnailImageRef];
+    
+    
+    CFRelease(thumbnailImageRef);
+    
+    return thumbnailImage;
+    
+}
+
+
+
 #pragma mark - Observer Response
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
