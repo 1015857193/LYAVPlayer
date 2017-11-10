@@ -61,17 +61,10 @@
                                     <action selector="turnAction:" destination="zYs-aA-vsa" eventType="touchUpInside" id="sjw-g0-ZWh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QfN-eM-qSZ">
-                                <rect key="frame" x="67" y="254" width="230" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="pg7-C9-7Uf"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iIt-dp-Vme" firstAttribute="centerX" secondItem="2WH-RX-2IK" secondAttribute="centerX" constant="-100" id="5wX-EZ-bqz"/>
-                            <constraint firstItem="piF-64-R9y" firstAttribute="top" secondItem="QfN-eM-qSZ" secondAttribute="bottom" constant="16" id="Bbr-A0-HMG"/>
                             <constraint firstItem="QZH-o7-ISY" firstAttribute="top" secondItem="piF-64-R9y" secondAttribute="bottom" constant="34" id="FqU-in-IhO"/>
                             <constraint firstItem="iIt-dp-Vme" firstAttribute="top" secondItem="fOU-Em-oTz" secondAttribute="bottom" constant="382" id="IW3-Tj-suC"/>
                             <constraint firstItem="piF-64-R9y" firstAttribute="centerX" secondItem="2WH-RX-2IK" secondAttribute="centerX" id="Ppx-n0-bbB"/>
@@ -80,12 +73,9 @@
                             <constraint firstItem="QZH-o7-ISY" firstAttribute="top" secondItem="iIt-dp-Vme" secondAttribute="bottom" constant="34" id="fmO-XH-vIF"/>
                             <constraint firstItem="QZH-o7-ISY" firstAttribute="leading" secondItem="2WH-RX-2IK" secondAttribute="leadingMargin" constant="51" id="iEc-yX-8Y3"/>
                             <constraint firstItem="iIt-dp-Vme" firstAttribute="baseline" secondItem="E6m-k7-BER" secondAttribute="baseline" id="kV6-4l-0xb"/>
-                            <constraint firstItem="QfN-eM-qSZ" firstAttribute="centerX" secondItem="QZH-o7-ISY" secondAttribute="centerX" id="q0S-Do-JmA"/>
-                            <constraint firstItem="QfN-eM-qSZ" firstAttribute="width" secondItem="QZH-o7-ISY" secondAttribute="width" id="thL-jt-2Lw"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="QfN-eM-qSZ" id="wF6-Iz-awJ"/>
                         <outlet property="pauseBtn" destination="E6m-k7-BER" id="kl4-Bu-PZW"/>
                         <outlet property="playBtn" destination="iIt-dp-Vme" id="lDe-0b-NZd"/>
                         <outlet property="slider" destination="QZH-o7-ISY" id="RNW-AL-FZI"/>

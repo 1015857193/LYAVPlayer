@@ -510,6 +510,8 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
 
 //获取视频宽高比
 - (CGFloat )getVideoScale:(NSURL *)URL{
+    
+    if (!URL) return 0.0f;
     //获取视频尺寸
     AVURLAsset *asset = [AVURLAsset assetWithURL:URL];
     
@@ -525,6 +527,8 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
 }
 
 - (UIImage *)getThumbnailImageFromVideoURL:(NSURL *)URL time:(NSTimeInterval )videoTime{
+    
+    if (!URL) return nil;
     
     UIImage *shotImage;
     

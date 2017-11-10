@@ -43,7 +43,7 @@
     self.playerView =[LYAVPlayerView sharedInstance];
     //先获取视频的宽高比
     CGFloat scale =[self.playerView getVideoScale:[NSURL URLWithString:VideoURL]];
-    self.playerView.frame =CGRectMake(0,64,ScreenWidth,200);
+    self.playerView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
     self.playerView.backgroundColor =[UIColor redColor];
     self.playerView.delegate =self;
     [self.view addSubview:self.playerView];
