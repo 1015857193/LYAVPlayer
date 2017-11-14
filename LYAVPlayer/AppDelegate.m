@@ -22,6 +22,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 后台播放音频设置,需要在Capabilities->Background Modes中勾选Audio,Airplay,and Picture in Picture
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setActive:YES error:nil];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    
+    
     self.window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -45,9 +52,9 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
    
-    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
-    [playerView.playerLayer setPlayer:nil];
-    
+//    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
+//    [playerView.playerLayer setPlayer:nil];
+//    
     
 }
 
@@ -59,10 +66,10 @@
 //已经激活
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
-    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
-    AVPlayer *player =playerView.player;
-    [playerView.playerLayer setPlayer:player];
-    
+//    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
+//    AVPlayer *player =playerView.player;
+//    [playerView.playerLayer setPlayer:player];
+//
 }
 
 

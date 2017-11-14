@@ -156,12 +156,12 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
        [self.player.currentItem cancelPendingSeeks];
        
         CMTime cmTime =CMTimeMakeWithSeconds(time, 1);
-//        if (CMTIME_IS_INVALID(cmTime) || self.player.currentItem.status != AVPlayerStatusReadyToPlay){
-//
-//            return;
-//        }
+        if (CMTIME_IS_INVALID(cmTime) || self.player.currentItem.status != AVPlayerStatusReadyToPlay){
+
+            return;
+        }
         
-        if (CMTIME_IS_INVALID(cmTime)) return;
+        
         [self.player seekToTime:cmTime toleranceBefore:CMTimeMake(1,1)  toleranceAfter:CMTimeMake(1,1) completionHandler:^(BOOL finished) {
             
             
@@ -215,7 +215,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     
     self.playerLayer =[AVPlayerLayer playerLayerWithPlayer:self.player];
     
-    // 此处为默认视频填充模式
+   // 此处为默认视频填充模式
     self.playerLayer.videoGravity = self.videoGravity;
     
     [self setNeedsLayout];
@@ -419,7 +419,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     [self disableTimeUpdates];
     
     if (self.playerLayer) {
-        
+
          [self.playerLayer removeFromSuperlayer];
     }
    
@@ -440,7 +440,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     }
     
     if (self.playerLayer) {
-        
+
         self.playerLayer =nil;
     }
     

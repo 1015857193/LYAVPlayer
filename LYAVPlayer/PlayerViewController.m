@@ -13,6 +13,7 @@
 
 
 @interface PlayerViewController ()<LYVideoPlayerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *pauseBtn;
@@ -27,8 +28,13 @@
 
 @property (nonatomic,strong)AVURLAsset *asset;
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic,strong)UIImageView *imageView;
 
+
+@property (nonatomic,assign)CGFloat switchTime;
+@property (nonatomic,assign)BOOL isSwitch;
+
+@property (nonatomic,assign)BOOL isChange;
 
 @end
 
@@ -37,11 +43,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
-    
-    //想实现后台播放使用sharedInstance
+   //想实现后台播放使用sharedInstance
     self.playerView =[LYAVPlayerView sharedInstance];
-    //先获取视频的宽高比
+//    //先获取视频的宽高比
     CGFloat scale =[self.playerView getVideoScale:[NSURL URLWithString:VideoURL]];
     self.playerView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
     self.playerView.backgroundColor =[UIColor redColor];
@@ -50,21 +54,19 @@
     [self.playerView setURL:[NSURL URLWithString:VideoURL]];
     [self.playerView play];
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5
-//                                                              * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//        [self.playerView seekToTime:30];
-//        [self.playerView play];
-//
-//
-//    });
-    
-    
+    _imageView =[UIImageView new];
+    _imageView.hidden =YES;
+    _imageView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
     _imageView.image =[self.playerView getThumbnailImageFromVideoURL:[NSURL URLWithString:VideoURL] time:5];
-    
+    [self.view addSubview:_imageView];
     
 }
 
+- (void)finishedPlaying{
+    
+    NSLog(@"播放完毕");
+   
+}
 
 - (IBAction)playAction:(id)sender {
     
@@ -88,18 +90,29 @@
     
     [self.playerView seekToTime:time];
     
+}
+- (IBAction)qualityAction:(id)sender {
     
+    _switchTime =[self.playerView getCurrentPlayTime];
+    
+    _isSwitch =YES;
+    _isChange =NO;
+    [self.playerView pause];
+    
+    _imageView.image =[self.playerView getThumbnailImageFromVideoURL:[NSURL URLWithString:VideoURL] time:_switchTime];
+    _imageView.hidden =NO;
+    [self.playerView setURL:[NSURL URLWithString:VideoURL]];
     
 }
 
 - (IBAction)valueEnd:(id)sender {
     
-    _isSlidering =YES;
+    _isSlidering =NO;
     
 }
 - (IBAction)valueBegin:(id)sender {
     
-    _isSlidering =NO;
+    _isSlidering =YES;
     
     
 }
@@ -128,7 +141,6 @@
 - (void)videoPlayerDidReachEnd:(LYAVPlayerView *)playerView{
     
      NSLog(@"播放完毕");
-    
 }
 //当前播放时间
 - (void)videoPlayer:(LYAVPlayerView *)playerView timeDidChange:(CGFloat )time{
@@ -138,10 +150,7 @@
     if(!_isSlidering){
         
         _slider.value =[self.playerView getCurrentPlayTime]/[self.playerView getTotalPlayTime];
-        
-    }
-    
-    
+        }
 }
 
 
@@ -150,6 +159,15 @@
     
     NSLog(@"当前缓冲的长度%f",duration);
     
+    if (_isChange) return;
+
+    if (duration >= _switchTime && _isSwitch) {
+        _imageView.hidden =YES;
+        [self.playerView seekToTime:_switchTime];
+        [self.playerView play];
+        _isChange =YES;
+
+    }
     
 }
 

@@ -61,6 +61,13 @@
                                     <action selector="turnAction:" destination="zYs-aA-vsa" eventType="touchUpInside" id="sjw-g0-ZWh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsl-D9-BUg">
+                                <rect key="frame" x="124" y="402" width="31" height="30"/>
+                                <state key="normal" title="高清"/>
+                                <connections>
+                                    <action selector="qualityAction:" destination="zYs-aA-vsa" eventType="touchUpInside" id="xEC-0b-Y6u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -68,11 +75,15 @@
                             <constraint firstItem="QZH-o7-ISY" firstAttribute="top" secondItem="piF-64-R9y" secondAttribute="bottom" constant="34" id="FqU-in-IhO"/>
                             <constraint firstItem="iIt-dp-Vme" firstAttribute="top" secondItem="fOU-Em-oTz" secondAttribute="bottom" constant="382" id="IW3-Tj-suC"/>
                             <constraint firstItem="piF-64-R9y" firstAttribute="centerX" secondItem="2WH-RX-2IK" secondAttribute="centerX" id="Ppx-n0-bbB"/>
+                            <constraint firstItem="Lsl-D9-BUg" firstAttribute="top" secondItem="iIt-dp-Vme" secondAttribute="top" id="VG9-HK-dYk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E6m-k7-BER" secondAttribute="trailing" constant="75" id="XXf-1S-mWo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QZH-o7-ISY" secondAttribute="trailing" constant="62" id="XtT-lx-sBM"/>
                             <constraint firstItem="QZH-o7-ISY" firstAttribute="top" secondItem="iIt-dp-Vme" secondAttribute="bottom" constant="34" id="fmO-XH-vIF"/>
                             <constraint firstItem="QZH-o7-ISY" firstAttribute="leading" secondItem="2WH-RX-2IK" secondAttribute="leadingMargin" constant="51" id="iEc-yX-8Y3"/>
+                            <constraint firstItem="Lsl-D9-BUg" firstAttribute="leading" secondItem="iIt-dp-Vme" secondAttribute="trailing" constant="21" id="jzd-uD-SyN"/>
                             <constraint firstItem="iIt-dp-Vme" firstAttribute="baseline" secondItem="E6m-k7-BER" secondAttribute="baseline" id="kV6-4l-0xb"/>
+                            <constraint firstItem="Lsl-D9-BUg" firstAttribute="height" secondItem="iIt-dp-Vme" secondAttribute="height" id="tiD-vg-yLh"/>
+                            <constraint firstItem="Lsl-D9-BUg" firstAttribute="width" secondItem="iIt-dp-Vme" secondAttribute="width" id="tpd-0Q-q3R"/>
                         </constraints>
                     </view>
                     <connections>
