@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "PlayerViewController.h"
+#import "FirstViewController.h"
+//#import <AVFoundation/AVFoundation.h>
+//#import <MediaPlayer/MediaPlayer.h>
 
 #import "LYAVPlayerView.h"
 
@@ -24,17 +27,16 @@
     // Override point for customization after application launch.
     // 后台播放音频设置,需要在Capabilities->Background Modes中勾选Audio,Airplay,and Picture in Picture
     AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setActive:YES error:nil];
+    
     [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
-    
+    [session setActive:YES error:nil];
     
     self.window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    PlayerViewController *playerViewCtrl =(PlayerViewController *)[[UIStoryboard storyboardWithName:@"PlayerViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"PlayerView"];
+    FirstViewController *first =[[FirstViewController alloc]init];
     
-    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:playerViewCtrl];
+    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:first];
     
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
@@ -46,16 +48,16 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     
     
+    
+    
 }
 
 //已经进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
-   
-//    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
-//    [playerView.playerLayer setPlayer:nil];
-//    
-    
+    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
+    [playerView.playerLayer setPlayer:nil];
+
 }
 
 
@@ -66,10 +68,10 @@
 //已经激活
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
-//    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
-//    AVPlayer *player =playerView.player;
-//    [playerView.playerLayer setPlayer:player];
-//
+    LYAVPlayerView *playerView =[LYAVPlayerView sharedInstance];
+    AVPlayer *player =playerView.player;
+    [playerView.playerLayer setPlayer:player];
+
 }
 
 

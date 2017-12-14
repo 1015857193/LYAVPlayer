@@ -333,7 +333,10 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
 //播放时间 观察
 - (void)addTimeObserver{
     
-    if (self.timeObserverToken || !self.player) return;
+    if (self.timeObserverToken || self.player == nil)
+    {
+        return;
+    }
     
     __weak typeof (self) weakSelf = self;
     self.timeObserverToken = [self.player addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(TimeObserverInterval, NSEC_PER_SEC) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
@@ -353,6 +356,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
         
     }];
     
+   
     
 }
 

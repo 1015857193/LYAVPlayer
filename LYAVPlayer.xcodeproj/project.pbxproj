@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3501AC821FCE812E00F5C624 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3501AC811FCE812E00F5C624 /* FirstViewController.m */; };
 		355894521F8F5DF0000F7DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355894511F8F5DF0000F7DF6 /* Assets.xcassets */; };
 		355894551F8F5DF0000F7DF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355894531F8F5DF0000F7DF6 /* LaunchScreen.storyboard */; };
 		355894581F8F5DF0000F7DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355894571F8F5DF0000F7DF6 /* main.m */; };
@@ -17,6 +18,7 @@
 		355894841F8F5EAD000F7DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355894811F8F5EAD000F7DF6 /* AppDelegate.m */; };
 		355894851F8F5EAD000F7DF6 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355894821F8F5EAD000F7DF6 /* PlayerViewController.m */; };
 		35B2C19B1F944D55006F31ED /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B2C19A1F944D55006F31ED /* SecondViewController.m */; };
+		35D4815D1FCD6E9200BFE36A /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 35D4815C1FCD6E9200BFE36A /* test.m4a */; };
 		CC06C9B014A3215D045586C7 /* Pods_LYAVPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A72186C4432CB19046B9E4 /* Pods_LYAVPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3501AC801FCE812E00F5C624 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		3501AC811FCE812E00F5C624 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		355894451F8F5DF0000F7DF6 /* LYAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355894511F8F5DF0000F7DF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		355894541F8F5DF0000F7DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 		35B2C1991F944D55006F31ED /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		35B2C19A1F944D55006F31ED /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		35B2C19C1F945226006F31ED /* LYAVPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LYAVPlayer-Prefix.pch"; sourceTree = "<group>"; };
+		35D4815C1FCD6E9200BFE36A /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 		719F277E04153F456DC6DFAF /* Pods-LYAVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYAVPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYAVPlayer/Pods-LYAVPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		76A72186C4432CB19046B9E4 /* Pods_LYAVPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYAVPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48C30709F50B91F8945C926 /* Pods-LYAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYAVPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYAVPlayer/Pods-LYAVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,8 +120,11 @@
 		355894471F8F5DF0000F7DF6 /* LYAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				35D4815C1FCD6E9200BFE36A /* test.m4a */,
 				355894801F8F5EAD000F7DF6 /* AppDelegate.h */,
 				355894811F8F5EAD000F7DF6 /* AppDelegate.m */,
+				3501AC801FCE812E00F5C624 /* FirstViewController.h */,
+				3501AC811FCE812E00F5C624 /* FirstViewController.m */,
 				3558947F1F8F5EAD000F7DF6 /* PlayerViewController.h */,
 				355894821F8F5EAD000F7DF6 /* PlayerViewController.m */,
 				3558947E1F8F5EAC000F7DF6 /* PlayerViewController.storyboard */,
@@ -290,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D4815D1FCD6E9200BFE36A /* test.m4a in Resources */,
 				355894831F8F5EAD000F7DF6 /* PlayerViewController.storyboard in Resources */,
 				355894551F8F5DF0000F7DF6 /* LaunchScreen.storyboard in Resources */,
 				355894521F8F5DF0000F7DF6 /* Assets.xcassets in Resources */,
@@ -376,6 +385,7 @@
 				355894851F8F5EAD000F7DF6 /* PlayerViewController.m in Sources */,
 				355894581F8F5DF0000F7DF6 /* main.m in Sources */,
 				355894841F8F5EAD000F7DF6 /* AppDelegate.m in Sources */,
+				3501AC821FCE812E00F5C624 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,12 @@
 
 #import "PlayerViewController.h"
 #import "SecondViewController.h"
+#import "DWAudioPlayer.h"
 
 
 
 
-@interface PlayerViewController ()<LYVideoPlayerDelegate>
+@interface PlayerViewController ()<LYVideoPlayerDelegate,DWAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
@@ -36,6 +37,8 @@
 
 @property (nonatomic,assign)BOOL isChange;
 
+@property (nonatomic,strong)DWAudioPlayer *audioPlayer;
+
 @end
 
 @implementation PlayerViewController
@@ -45,7 +48,7 @@
     
    //想实现后台播放使用sharedInstance
     self.playerView =[LYAVPlayerView sharedInstance];
-//    //先获取视频的宽高比
+    //先获取视频的宽高比
     CGFloat scale =[self.playerView getVideoScale:[NSURL URLWithString:VideoURL]];
     self.playerView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
     self.playerView.backgroundColor =[UIColor redColor];
@@ -53,20 +56,19 @@
     [self.view addSubview:self.playerView];
     [self.playerView setURL:[NSURL URLWithString:VideoURL]];
     [self.playerView play];
-    
+
     _imageView =[UIImageView new];
     _imageView.hidden =YES;
     _imageView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
     _imageView.image =[self.playerView getThumbnailImageFromVideoURL:[NSURL URLWithString:VideoURL] time:5];
     [self.view addSubview:_imageView];
     
-}
-
-- (void)finishedPlaying{
     
-    NSLog(@"播放完毕");
    
 }
+
+
+
 
 - (IBAction)playAction:(id)sender {
     
@@ -77,6 +79,10 @@
 - (IBAction)pauseAction:(id)sender {
     
     [self.playerView pause];
+  //  [self.playerView stop];
+    
+    
+    [self.audioPlayer audioPlay];
     
 }
 
@@ -150,7 +156,7 @@
     if(!_isSlidering){
         
         _slider.value =[self.playerView getCurrentPlayTime]/[self.playerView getTotalPlayTime];
-        }
+    }
 }
 
 
