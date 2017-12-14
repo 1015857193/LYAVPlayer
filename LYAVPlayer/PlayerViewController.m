@@ -8,12 +8,12 @@
 
 #import "PlayerViewController.h"
 #import "SecondViewController.h"
-#import "DWAudioPlayer.h"
 
 
 
 
-@interface PlayerViewController ()<LYVideoPlayerDelegate,DWAudioPlayerDelegate>
+
+@interface PlayerViewController ()<LYVideoPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
@@ -37,7 +37,7 @@
 
 @property (nonatomic,assign)BOOL isChange;
 
-@property (nonatomic,strong)DWAudioPlayer *audioPlayer;
+
 
 @end
 
@@ -51,7 +51,7 @@
     //先获取视频的宽高比
     CGFloat scale =[self.playerView getVideoScale:[NSURL URLWithString:VideoURL]];
     self.playerView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
-    self.playerView.backgroundColor =[UIColor redColor];
+    
     self.playerView.delegate =self;
     [self.view addSubview:self.playerView];
     [self.playerView setURL:[NSURL URLWithString:VideoURL]];
@@ -80,9 +80,6 @@
     
     [self.playerView pause];
   //  [self.playerView stop];
-    
-    
-    [self.audioPlayer audioPlay];
     
 }
 

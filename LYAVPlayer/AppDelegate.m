@@ -9,8 +9,7 @@
 #import "AppDelegate.h"
 #import "PlayerViewController.h"
 #import "FirstViewController.h"
-//#import <AVFoundation/AVFoundation.h>
-//#import <MediaPlayer/MediaPlayer.h>
+
 
 #import "LYAVPlayerView.h"
 
