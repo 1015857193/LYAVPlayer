@@ -64,7 +64,6 @@
     [self.view addSubview:_imageView];
     
     
-   
 }
 
 
@@ -144,6 +143,10 @@
 - (void)videoPlayerDidReachEnd:(LYAVPlayerView *)playerView{
     
      NSLog(@"播放完毕");
+    
+    [self.playerView setURL:[NSURL URLWithString:VideoURL]];
+    [self.playerView play];
+    
 }
 //当前播放时间
 - (void)videoPlayer:(LYAVPlayerView *)playerView timeDidChange:(CGFloat )time{

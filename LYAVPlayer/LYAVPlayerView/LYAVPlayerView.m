@@ -200,6 +200,17 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     
     // 初始化playerItem
     self.item =[AVPlayerItem playerItemWithAsset:urlAsset];
+    if (@available(iOS 10.0, *)) {
+
+        self.item.preferredForwardBufferDuration =10.f;
+
+    } else {
+        // Fallback on earlier versions
+    }
+
+    
+    
+    
     
     //判断
     if(!self.item){
@@ -455,24 +466,22 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
 //播放
 - (void)play{
     
-    if(!self.isPlaying){
-        
         self.isPlaying =YES;
-        self.player.rate = _rate;
-        
-    }
-    
+        self.player.rate =_rate?:1.0f;
 }
 
 //暂停
 - (void)pause{
     
     if(self.isPlaying){
-    
+
     self.isPlaying =NO;
-    self.player.rate =0.0f;
-        
+   // self.player.rate =0.0f;
+
+        [self.player pause];
     }
+   
+   
     
 }
 
