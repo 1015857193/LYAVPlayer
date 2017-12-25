@@ -47,7 +47,16 @@
     
     [super viewWillAppear:animated];
     
+    
      NSLog(@"test3%@",[self description]);
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    
+    NSLog(@"test4%@",[self description]);
     
 }
 
