@@ -43,6 +43,14 @@
 
 @implementation PlayerViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+     NSLog(@"test3%@",[self description]);
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -72,13 +80,16 @@
 - (IBAction)playAction:(id)sender {
     
     [self.playerView play];
+    
 }
 
 
 - (IBAction)pauseAction:(id)sender {
     
     [self.playerView pause];
-  //  [self.playerView stop];
+ //   [self.playerView stop];
+    
+    
     
 }
 
