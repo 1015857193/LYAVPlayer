@@ -7,4 +7,5 @@ LYAVPlayer视频播放器，AVPlayer的封装，继承UIView.LYAVPlaye旨在封�
          [playerView setURL:[NSURL URLWithString:VideoURL]];//设置播放的URL
          [playerView play];//开始播放
 ```
+支持`cocoa pods pod 'LYAVPlayer','~> 1.0.1'`
 博客地址：http://www.jianshu.com/u/e36a07f5dc7b
