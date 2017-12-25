@@ -9,4 +9,4 @@ LYAVPlayer视频播放器，AVPlayer的封装，继承UIView.LYAVPlaye旨在封�
 ```
 支持`cocoa pods 工程中pod 'LYAVPlayer','~> 1.0.1'`
 
-博客地址：http://www.jianshu.com/u/e36a07f5dc7b
+博客地址：https://juejin.im/user/585b4586128fe1006b95bd7b
