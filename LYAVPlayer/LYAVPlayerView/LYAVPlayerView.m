@@ -200,6 +200,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     
     // 初始化playerItem
     self.item =[AVPlayerItem playerItemWithAsset:urlAsset];
+    
     if (@available(iOS 10.0, *)) {
 
         self.item.preferredForwardBufferDuration =10.f;
@@ -350,7 +351,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     }
     
     __weak typeof (self) weakSelf = self;
-    self.timeObserverToken = [self.player addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(TimeObserverInterval, NSEC_PER_SEC) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+    self.timeObserverToken = [self.player addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
         
         __strong typeof (weakSelf) strongSelf = weakSelf;
         if (!strongSelf)

@@ -16,8 +16,6 @@
 
 #define VideoURL @"http://wvideo.spriteapp.cn/video/2016/0328/56f8ec01d9bfe_wpd.mp4"
 
-#define m3u8URL  @"https://cm14-ccm1-2.play.bokecc.com/flvs/B219C561216AF9D1/2017-12-12/6994D1A2945A678A9C33DC5901307461-10.m3u8?t=1513338792&key=C766F1E3014A2A43E8536E344FC82497&upid=6425201513331592098&version=ios_3.1.0"
-
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

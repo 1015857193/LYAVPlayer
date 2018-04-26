@@ -64,21 +64,21 @@
     [super viewDidLoad];
     
    //想实现后台播放使用sharedInstance
-    self.playerView =[LYAVPlayerView sharedInstance];
+    self.playerView =[[LYAVPlayerView alloc]init];
     //先获取视频的宽高比
-    CGFloat scale =[self.playerView getVideoScale:[NSURL URLWithString:VideoURL]];
-    self.playerView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
+ //   CGFloat scale =[self.playerView getVideoScale:[NSURL URLWithString:VideoURL]];
+    self.playerView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth/2);
     
     self.playerView.delegate =self;
     [self.view addSubview:self.playerView];
     [self.playerView setURL:[NSURL URLWithString:VideoURL]];
     [self.playerView play];
 
-    _imageView =[UIImageView new];
-    _imageView.hidden =YES;
-    _imageView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
-    _imageView.image =[self.playerView getThumbnailImageFromVideoURL:[NSURL URLWithString:VideoURL] time:5];
-    [self.view addSubview:_imageView];
+//    _imageView =[UIImageView new];
+//    _imageView.hidden =YES;
+//    _imageView.frame =CGRectMake(0,64,ScreenWidth,ScreenWidth*scale);
+//    _imageView.image =[self.playerView getThumbnailImageFromVideoURL:[NSURL URLWithString:VideoURL] time:5];
+//    [self.view addSubview:_imageView];
     
     
 }

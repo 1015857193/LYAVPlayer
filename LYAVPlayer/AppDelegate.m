@@ -23,6 +23,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //NSURLCache
+    NSURLCache *URLCache =[[NSURLCache alloc]initWithMemoryCapacity:4*1024*1024 diskCapacity:20*1024*1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
+    
+    
     // Override point for customization after application launch.
     // 后台播放音频设置,需要在Capabilities->Background Modes中勾选Audio,Airplay,and Picture in Picture
     AVAudioSession *session = [AVAudioSession sharedInstance];
