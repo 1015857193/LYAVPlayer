@@ -276,7 +276,7 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(playerItemDidPlayToEndTime:)
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:nil];
+                                               object:playerItem];
     
     //耳机插入和拔掉通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioRouteChangeListenerCallback:) name:AVAudioSessionRouteChangeNotification object:nil];
